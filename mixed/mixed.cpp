@@ -8,6 +8,11 @@
 #include <sys/ioctl.h>
 #endif
 
+class terminal {
+public:
+  terminal() = delete;
+};
+
 int main(int argc, char** argv) {
   return 0;
 }
