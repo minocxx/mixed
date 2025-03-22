@@ -11,6 +11,14 @@
 class terminal {
 public:
   terminal() = delete;
+
+  static int read_buf(char* buf, int len) {
+    return 0;
+  }
+
+  static int write_buf(const char* buf, int len) {
+    return 0;
+  }
 };
 
 int main(int argc, char** argv) {
