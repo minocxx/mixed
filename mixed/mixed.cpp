@@ -13,10 +13,14 @@ public:
   terminal() = delete;
 
   static int read_buf(char* buf, int len) {
+#if defined(POSIX)
+#endif
     return 0;
   }
 
   static int write_buf(const char* buf, int len) {
+#if defined(POSIX)
+#endif
     return 0;
   }
 };
