@@ -36,6 +36,10 @@ public:
   static int write(std::string_view sv) {
     return write_buf(sv.data(), sv.size());
   }
+
+  static int write(int value) {
+    return write(std::to_string(value));
+  }
 };
 
 int main(int argc, char** argv) {
