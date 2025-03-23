@@ -15,6 +15,14 @@ class terminal {
 public:
   terminal() = delete;
 
+  static bool enable_raw_mode() {
+    return false;
+  }
+
+  static bool disable_raw_mode() {
+    return false;
+  }
+
   static int read_buf(char* buf, int len) {
 #if defined(POSIX)
 #define read ::read
