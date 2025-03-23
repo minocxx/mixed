@@ -8,6 +8,9 @@
 #include <sys/ioctl.h>
 #endif
 
+#include <string>
+#include <string_view>
+
 class terminal {
 public:
   terminal() = delete;
