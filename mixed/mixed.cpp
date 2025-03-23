@@ -16,10 +16,14 @@ public:
   terminal() = delete;
 
   static bool enable_raw_mode() {
+#if defined(POSIX)
+#endif
     return false;
   }
 
   static bool disable_raw_mode() {
+#if defined(POSIX)
+#endif
     return false;
   }
 
