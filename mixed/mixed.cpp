@@ -14,14 +14,18 @@ public:
 
   static int read_buf(char* buf, int len) {
 #if defined(POSIX)
+#define read ::read
     return read(STDIN_FILENO, buf, len);
+#undef read
 #endif
     return 0;
   }
 
   static int write_buf(const char* buf, int len) {
 #if defined(POSIX)
+#define write ::write
     return write(STDOUT_FILENO, buf, len);
+#undef write
 #endif
     return 0;
   }
