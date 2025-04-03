@@ -10,6 +10,7 @@
 
 #include <string>
 #include <string_view>
+#include <vector>
 
 class terminal {
 public:
@@ -52,6 +53,8 @@ public:
   static int write(int value) {
     return write(std::to_string(value));
   }
+
+  static int write(std::nullptr_t) = delete;
 };
 
 class editor {
